@@ -25,12 +25,12 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'feifeiwuxian' => '785509893@qq.com' }
-  s.source           = { :git => 'https://github.com/feifeiwuxian/MyAMap.git', :tag => s.version.to_s }
+  s.source           = { :http => 'http://download.xiaoyulab.com/apks/MyAMap.framework.zip' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'MyAMap/Classes/**/*'
+  # s.source_files = 'MyAMap/Classes/**/*'
   
   # s.resource_bundles = {
   #   'MyAMap' => ['MyAMap/Assets/*.png']
@@ -39,4 +39,12 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+    s.default_subspec = 'zip'
+    s.subspec 'zip' do |zip|
+
+        puts '-------------------------------------------------------------------'
+        puts 'Notice: MyAMapSDK is zip now'
+        puts '-------------------------------------------------------------------'
+        zip.ios.vendored_frameworks = '*.framework'
+    end
 end

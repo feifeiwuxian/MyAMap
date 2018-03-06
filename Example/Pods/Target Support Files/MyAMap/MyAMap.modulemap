@@ -1,0 +1,6 @@
+framework module MyAMap {
+  umbrella header "MyAMap-umbrella.h"
+
+  export *
+  module * { export * }
+}
