@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MyAMap_Example' do
+  pod 'MyAMap', :path => '../'
+
+  target 'MyAMap_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
